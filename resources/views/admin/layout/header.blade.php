@@ -20,7 +20,7 @@
         <ul class="nav navbar-nav">
           <!-- Control Sidebar Toggle Button -->
           <li>
-            <a href="#" data-toggle="control-sidebar">Keluar</a>
+            <a href="{{ url('/logout') }}" class="dropdown-toggle">Keluar</a>
           </li>
         </ul>
       </div>

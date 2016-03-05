@@ -32,11 +32,11 @@
           <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="treeview-menu">
-                <li><a href="/penduduk"><i class="fa fa-circle-o"></i> Data Induk</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Penduduk Sementara</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Kartu Keluarga</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> KTP Baru</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Rekapitulasi</a></li>
+          <li><a href="/penduduk"><i class="fa fa-circle-o"></i> Data Induk</a></li>
+          <li><a href="/sementara"><i class="fa fa-circle-o"></i> Penduduk Sementara</a></li>
+          <li><a href="/keluarga"><i class="fa fa-circle-o"></i> Keluarga</a></li>
+          <li><a href="/ktp"><i class="fa fa-circle-o"></i> Wajib KTP</a></li>
+          <li><a href="/rekapitulasi"><i class="fa fa-circle-o"></i> Rekapitulasi</a></li>
       </ul>
       </li>
 
@@ -47,10 +47,10 @@
           <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Peraturan </a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Keputusan Kepala</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Inventaris</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Aparat Pemerintah</a></li>
+          <li><a href="/peraturan"><i class="fa fa-circle-o"></i> Peraturan </a></li>
+          <li><a href="/keputusan"><i class="fa fa-circle-o"></i> Keputusan Kepala</a></li>
+          <li><a href="/inventaris"><i class="fa fa-circle-o"></i> Inventaris</a></li>
+          <li><a href="/aparat"><i class="fa fa-circle-o"></i> Aparat Pemerintah</a></li>
       </ul>
       </li>
 
@@ -61,19 +61,19 @@
           <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Tanah Milik Desa</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Tanah Di Desa</a></li>
+          <li><a href="/tanah"><i class="fa fa-circle-o"></i> Tanah Di Desa</a></li>
+          <li><a href="/milik"><i class="fa fa-circle-o"></i> Tanah Milik Desa</a></li>
       </ul>
       </li>
 
       <li class="treeview">
-        <a href="/dashboard/profil">
+        <a href="/profil">
           <i class="fa fa-user"></i> <span>Pengguna</span>
         </a>
       </li>
 
       <li class="treeview">
-        <a href="/dashboard/profil">
+        <a href="/profil">
           <i class="fa fa-gear"></i> <span>Pengaturan</span>
         </a>
       </li>

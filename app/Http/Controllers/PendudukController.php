@@ -8,9 +8,21 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Penduduk;
 use Carbon\Carbon;
+use Excel;
+use PDF;
 
 class PendudukController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
 	 * Display a listing of the resource.
 	 *
@@ -103,16 +115,24 @@ class PendudukController extends Controller
 		//
 	}
 
-	public function pdf()
+	public function kk()
 	{
-		$pdf = PDF::loadView('partials.info');
-		return $pdf->stream();
+		$pdf = PDF::loadView('pdf.kk');
+		return $pdf->setPaper('a4', 'landscape')->stream();
 	}
+
+	public function ktp()
+	{
+		$pdf = PDF::loadView('pdf.ktp');
+		return $pdf->setPaper('a4', 'potrait')->stream();
+	}
+
+
 	public function exportToExcel()
 	{
-		Excel::create(Carbon::now().' - data induk pendaftar', function ($excel)
+		Excel::create(Carbon::now().' - data induk penduduk', function ($excel)
 		{
-			$excel->setTitle('Data Induk Pendaftar');
+			$excel->setTitle('Data Induk Penduduk');
     			$excel->sheet('First sheet', function($sheet) {
 				$titles = array(
 					'No. Registrasi',
@@ -123,6 +143,6 @@ class PendudukController extends Controller
 
 			});
 
-		})->download('xlsx');
+		})->download('xls');
 	}
 }

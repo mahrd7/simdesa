@@ -37,7 +37,7 @@
         <td>{{  $penduduk->pekerjaan }}</td>
         <td>{{  $penduduk->pekerjaan }}</td>
         <td>{{  $penduduk->hubungan }}</td>
-        <td>{{  $penduduk->ktp }}</td>
+        <td>{{  $penduduk->nik }}</td>
       </tr>
       @endforeach
     </tbody>

@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('admin');
-});
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,8 +24,19 @@ Route::get('/', function () {
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
- 	Route::get('dashboard', function () { return view('admin'); });
-	Route::resource('penduduk', 'PendudukController');
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+    
+    Route::get('/', 'AdminController@index');
 
+    Route::get('dashboard', function () { return view('admin'); });
+
+    Route::get('penduduk/kk', 'PendudukController@kk');
+    Route::get('penduduk/ktp', 'PendudukController@ktp');
+ 	Route::get('penduduk/xlsx', 'PendudukController@exportToExcel');
+	Route::resource('penduduk', 'PendudukController');
+	Route::resource('keluarga', 'KeluargaController');
+	Route::resource('tanah', 'TanahController');
+
+    Route::get('/home', 'HomeController@index');
 });
