@@ -37,6 +37,7 @@ Route::group(['middleware' => 'web'], function () {
 	Route::resource('penduduk', 'PendudukController');
 	Route::resource('keluarga', 'KeluargaController');
 	Route::resource('tanah', 'TanahController');
+	Route::resource('ktp', 'KtpController');
 
     Route::get('/home', 'HomeController@index');
 });

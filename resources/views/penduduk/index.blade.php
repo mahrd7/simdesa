@@ -15,46 +15,28 @@
       <tr>
         <th>Nama</th>
         <th>L/P</th>
-        <th>Status</th>
         <th>TTL</th>
-        <th>Agama</th>
-        <th>Pendidikan</th>
-        <th>Pekerjaan</th>
-        <th>Alamat</th>
-        <th>Kedudukan</th>
         <th>No. KTP</th>
+        <th>Kedudukan</th>
+        <th>Pekerjaan</th>
+        <th>Usia</th>
+        <th>Alamat</th>
       </tr>
     </thead>
     <tbody>
     @foreach ($penduduks as $penduduk)
       <tr>
         <td><a href="/penduduk/{{ $penduduk->id }}/edit">{{  $penduduk->nama }}</a></td>
-        <td>{{  $penduduk->jk }}</td>
-        <td>{{  $penduduk->status }}</td>
-        <td>{{  $penduduk->tempat_lahir }}, {{  $penduduk->tanggal_lahir }}</td>
-        <td>{{  $penduduk->agama }}</td>
-        <td>{{  $penduduk->pendidikan }}</td>
-        <td>{{  $penduduk->pekerjaan }}</td>
-        <td>{{  $penduduk->pekerjaan }}</td>
-        <td>{{  $penduduk->hubungan }}</td>
-        <td>{{  $penduduk->nik }}</td>
+        <td>{{ $penduduk->jk }}</td>
+        <td>{{ $penduduk->tempat_lahir }}, {{  $penduduk->tanggal_lahir }}</td>
+        <td>{{ $penduduk->no_ktp }}</td>
+        <td>{{ $penduduk->hubungan }}</td>
+        <td>{{ $penduduk->pekerjaan }}</td>
+        <td>{{ $penduduk->tanggal_lahir->diffInYears(Carbon::now()) }}</td>
+        <td>KP. {{ $penduduk->dusun }} RT. {{ $penduduk->rt }} RW. {{ $penduduk->rw }}</td>
       </tr>
       @endforeach
     </tbody>
-    <tfoot>
-      <tr>
-        <th>Nama</th>
-        <th>L/P</th>
-        <th>Status</th>
-        <th>TTL</th>
-        <th>Agama</th>
-        <th>Pendidikan</th>
-        <th>Pekerjaan</th>
-        <th>Alamat Lengkap</th>
-        <th>Kedudukan</th>
-        <th>No. KTP</th>
-      </tr>
-    </tfoot>
   </table>
 </div><!-- /.box-body -->
 </div><!-- /.box -->

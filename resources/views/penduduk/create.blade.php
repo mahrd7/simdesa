@@ -4,7 +4,7 @@
 
 @section('content')
 
-{!! Form::open(['route' => 'penduduk.store', 'files' => true, 'class' => 'form-horizontal'])!!}
+{!! Form::model($penduduk = new App\Penduduk ,['url' => 'penduduk', 'files' => true, 'class' => 'form-horizontal']) !!}
  	@include('penduduk._form', ['submitButtonText' => 'Tambah Penduduk'])
 {!! Form::close() !!}
 

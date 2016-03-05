@@ -27,9 +27,10 @@ class CreatePenduduksTable extends Migration {
 			$table->string('pendidikan');
 			$table->string('pekerjaan');
 			$table->string('gol_darah')->nullable();
+			$table->string('agama');
 			$table->string('ibu');
 			$table->string('ayah');
-			$table->string('alamat');
+			$table->string('dusun');
 			$table->string('rt');
 			$table->string('rw');
 			$table->string('meninggal');
