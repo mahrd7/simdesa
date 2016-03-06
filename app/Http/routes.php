@@ -34,7 +34,10 @@ Route::group(['middleware' => 'web'], function () {
 	Route::resource('keluarga', 'KeluargaController');
 	Route::resource('tanah', 'TanahController');
     Route::resource('ktp', 'KtpController');
-	Route::resource('aparat', 'AparatController');
+    Route::resource('aparat', 'AparatController');
+    Route::resource('inventaris', 'InventarisController');
+    Route::resource('keputusan', 'KeputusanController');
+	Route::resource('peraturan', 'PeraturanController');
 
     Route::get('/home', 'HomeController@index');
 });

@@ -14,6 +14,12 @@ class CreatePeraturansTable extends Migration
     {
         Schema::create('peraturans', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nomor');
+            $table->string('tentang');
+            $table->string('uraian');
+            $table->string('persetujuan_bpd');
+            $table->string('dilaporkan');
+            $table->string('keterangan');
             $table->timestamps();
         });
     }

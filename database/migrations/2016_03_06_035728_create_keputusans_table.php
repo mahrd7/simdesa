@@ -14,6 +14,11 @@ class CreateKeputusansTable extends Migration
     {
         Schema::create('keputusans', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nomor');
+            $table->string('tentang');
+            $table->string('uraian');
+            $table->string('dilaporkan');
+            $table->string('keterangan');
             $table->timestamps();
         });
     }
