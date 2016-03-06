@@ -16,12 +16,12 @@ class CreatePenduduksTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('nama');
-			$table->string('nik')->unique();
-			$table->string('no_ktp')->unique()->nullable();
+			$table->string('nik');
+			$table->string('no_ktp')->nullable();
 			$table->string('no_kk');
 			$table->string('hubungan');
 			$table->string('tempat_lahir');
-			$table->date('tanggal_lahir');
+			$table->date('tanggal_lahir')->nullable();
 			$table->string('jk');
 			$table->string('status');
 			$table->string('pendidikan');
@@ -33,13 +33,12 @@ class CreatePenduduksTable extends Migration {
 			$table->string('dusun');
 			$table->string('rt');
 			$table->string('rw');
-			$table->string('meninggal');
+			$table->string('meninggal')->nullable();
 			$table->date('tgl_meninggal')->nullable();
 			$table->string('kelainan_mental_fisik')->nullable();
 			$table->string('baca_tulis')->nullable();
 			$table->string('jenis_akseptor')->nullable();
 			$table->string('jenis_layanan_reg_rental')->nullable();
-			$table->timestamps();
 		});
 	}
 

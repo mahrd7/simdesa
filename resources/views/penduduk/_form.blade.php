@@ -58,7 +58,7 @@
       <div class="form-group {!! $errors->has('tanggal_lahir') ? 'has-error' : '' !!}">
         <label for="tanggal_lahir" class="col-sm-3 control-label">Tanggal Lahir</label>
         <div class="col-sm-9">
-        {!! Form::input('date', 'tanggal_lahir', $penduduk->tanggal_lahir, ['class' => 'form-control']) !!}
+        {!! Form::input('date', 'tanggal_lahir', Carbon\Carbon::now()->format('d-m-Y'), ['class' => 'form-control']) !!}
         {!! $errors->first('tanggal_lahir', '<p class="help-block">:message</p>') !!}
         </div>
       </div>

@@ -4,6 +4,7 @@
 
 @section('content')
 
+<div class="row">
 <div class="col-md-12">
 <div class="box">
 <div class="box-header">
@@ -14,6 +15,7 @@
     <thead>
       <tr>
         <th>Nama Kepala</th>
+        <th>Nomor Kartu</th>
         <th>Jumlah Anggota</th>
         <th>Alamat</th>
       </tr>
@@ -22,8 +24,9 @@
     @foreach ($keluargas as $keluarga)
       <tr>
         <td><a href="/keluarga/{{ $keluarga->id }}/edit">{{  $keluarga->nama }}</a></td>
-        <td>{{  $keluarga->jk }}</td>
-        <td>{{  $keluarga->alamat }}</td>
+        <td>{{ $keluarga->no_kk }}</td>
+        <td> - </td>
+        <td>{{ $keluarga->dusun }} RT. {{ $keluarga->rt }} RW. {{ $keluarga->rw }}</td>
       </tr>
       @endforeach
     </tbody>
@@ -34,6 +37,8 @@
   <a href="/penduduk/create" class="btn btn-primary">Tambah Penduduk</a>
   <a href="/penduduk/xlsx" class="btn btn-primary">Export to Excel</a>
 
+
+</div>
 
 </div>
 

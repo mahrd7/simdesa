@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Penduduk;
+
 
 class AdminController extends Controller
 {
@@ -24,6 +26,14 @@ class AdminController extends Controller
 	 * @return Response
 	 */
     public function index(){
-    	return view('admin');
+        $count = [
+            'penduduk' => Penduduk::count(),
+            'keluarga' => Penduduk::where('hubungan', '=', 'KEPALA KELUARGA')->count(),
+            'laki_laki' => Penduduk::where('jk', '=', 'L')->count(),
+            'perempuan' => Penduduk::where('jk', '=', 'P')->count(),
+
+        ];
+
+    	return view('admin.dashboard', compact('count'));
     }
 }

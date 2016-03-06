@@ -21,7 +21,7 @@
         <li class="header">MENU UTAMA</li>
         <!-- Optionally, you can add icons to the links -->
         <li>
-        <a href="/dashboard">
+        <a href="/">
         <i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
       </li>
 
@@ -55,15 +55,10 @@
       </li>
 
       <li class="treeview">
-        <a href="#">
+        <a href="/tanah">
           <i class="fa fa-map"></i>
           <span>Pertanahan</span>
-          <i class="fa fa-angle-left pull-right"></i>
         </a>
-        <ul class="treeview-menu">
-          <li><a href="/tanah"><i class="fa fa-circle-o"></i> Tanah Di Desa</a></li>
-          <li><a href="/milik"><i class="fa fa-circle-o"></i> Tanah Milik Desa</a></li>
-      </ul>
       </li>
 
       <li class="treeview">

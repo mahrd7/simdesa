@@ -4,6 +4,7 @@
 
 @section('content')
 
+<div class="row">
 <div class="col-md-12">
 <div class="box">
 <div class="box-header">
@@ -40,7 +41,7 @@
   <a href="/tanah/create" class="btn btn-primary">Tambah tanah</a>
   <a href="/tanah/xlsx" class="btn btn-primary">Export to Excel</a>
 
-
+</div>
 </div>
 
 @endsection

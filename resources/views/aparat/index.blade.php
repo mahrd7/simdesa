@@ -15,24 +15,26 @@
     <thead>
       <tr>
         <th>Nama</th>
+        <th>NIAP</th>
+        <th>NIP</th>
         <th>L/P</th>
         <th>TTL</th>
-        <th>NIK</th>
-        <th>Kedudukan</th>
-        <th>Pekerjaan</th>
-        <th>Alamat</th>
+        <th>Pangkat</th>
+        <th>Golongan</th>
+        <th>Jabatan</th>
       </tr>
     </thead>
     <tbody>
-    @foreach ($penduduks as $penduduk)
+    @foreach ($aparats as $aparat)
       <tr>
-        <td><a href="/penduduk/{{ $penduduk->id }}/edit">{{  $penduduk->nama }}</a></td>
-        <td>{{ $penduduk->jk }}</td>
-        <td>{{ $penduduk->tempat_lahir }}, {{  $penduduk->tanggal_lahir }}</td>
-        <td>{{ $penduduk->nik }}</td>
-        <td>{{ $penduduk->hubungan }}</td>
-        <td>{{ $penduduk->pekerjaan }}</td>
-        <td>{{ $penduduk->dusun }} RT. {{ $penduduk->rt }} RW. {{ $penduduk->rw }}</td>
+        <td><a href="/aparat/{{ $aparat->id }}/edit">{{  $aparat->nama }}</a></td>
+        <td>{{ $aparat->niap }}</td>
+        <td>{{ $aparat->nip }}</td>
+        <td>{{ $aparat->jk }}</td>
+        <td>{{ $aparat->tempat_lahir }}, {{ $aparat->tanggal_lahir }}</td>
+        <td>{{ $aparat->pangkat }}</td>
+        <td>{{ $aparat->golongan }}</td>
+        <td>{{ $aparat->jabatan }}</td>
       </tr>
       @endforeach
     </tbody>
@@ -40,9 +42,8 @@
 </div><!-- /.box-body -->
 </div><!-- /.box -->
 
-  <a href="/penduduk/create" class="btn btn-primary">Tambah Penduduk</a>
-  <a href="/penduduk/xlsx" class="btn btn-primary">Export to Excel</a>
-
+  <a href="/aparat/create" class="btn btn-primary">Tambah Aparat</a>
+  <a href="/aparat/xlsx" class="btn btn-primary">Export ke Excel</a>
 
 </div>
 </div>

@@ -26,18 +26,15 @@
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
-    
     Route::get('/', 'AdminController@index');
-
-    Route::get('dashboard', function () { return view('admin'); });
-
     Route::get('penduduk/kk', 'PendudukController@kk');
     Route::get('penduduk/ktp', 'PendudukController@ktp');
  	Route::get('penduduk/xlsx', 'PendudukController@exportToExcel');
 	Route::resource('penduduk', 'PendudukController');
 	Route::resource('keluarga', 'KeluargaController');
 	Route::resource('tanah', 'TanahController');
-	Route::resource('ktp', 'KtpController');
+    Route::resource('ktp', 'KtpController');
+	Route::resource('aparat', 'AparatController');
 
     Route::get('/home', 'HomeController@index');
 });
